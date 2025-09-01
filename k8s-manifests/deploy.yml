@@ -4,6 +4,7 @@ metadata:
   name: my-app-primary
   labels:
     app: my-app
+    app.kubernetes.io/instance: diffapp
 spec:
   replicas: 3
   selector:
@@ -13,6 +14,7 @@ spec:
     metadata:
       labels:
         app: my-app
+        app.kubernetes.io/instance: diffapp.
     spec:
       containers:
         - name: my-app
